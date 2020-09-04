@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Routes (must come after express.json and urlencoded)
+
 const usersRoute = require("./routes/users");
 app.use("/users", usersRoute);
 
@@ -22,7 +23,7 @@ mongoose.connect(
     useUnifiedTopology: true,
   },
   () => {
-    console.log("Connected to BD");
+    console.log("Connected to database!");
   }
 );
 
